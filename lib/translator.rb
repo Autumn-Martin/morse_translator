@@ -39,4 +39,15 @@ class Translator
                     "0" => "-----",
                     " " => " "}
   end
+
+  def eng_to_morse(english)
+    # turn english into an array
+    # iterate over English
+    # for each letter, return a corresponding value in morse
+    letters = english.chars
+    morse = letters.map do |letter|
+      @dictionary[letter]
+    end
+    morse.join
+  end
 end
