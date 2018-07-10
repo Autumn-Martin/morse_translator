@@ -50,4 +50,13 @@ class Translator
     end
     morse.join
   end
+
+  def from_file(file_name)
+    # read english from input.txt
+    # translate input to morse
+    file = File.open(file_name, "r")
+    file.read
+    binding.pry
+    #eng_to_morse(english)
+  end
 end
