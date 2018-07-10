@@ -15,6 +15,15 @@ class TranslatorTest < Minitest::Test
   def test_it_translates
     translator = Translator.new
     assert_equal "......-...-..--- .-----.-..-..-..", translator.eng_to_morse("hello world")
-  end 
+  end
 
+  def test_it_translates_capital_letters
+    translator = Translator.new
+    assert_equal "......-...-..--- .-----.-..-..-..", translator.eng_to_morse("Hello World")
+  end
+
+  def test_it_translates_capitals_and_numbers
+    translator = Translator.new
+    assert_equal "-......-.. .-.-.. ...-- ..........--....", translator.eng_to_morse("There are 3 ships")
+  end
 end
