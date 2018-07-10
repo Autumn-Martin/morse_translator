@@ -44,7 +44,7 @@ class Translator
     # turn english into an array
     # iterate over English
     # for each letter, return a corresponding value in morse
-    letters = english.chars
+    letters = english.downcase.chars
     morse = letters.map do |letter|
       @dictionary[letter]
     end
